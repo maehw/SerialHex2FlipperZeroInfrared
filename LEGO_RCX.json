@@ -1,0 +1,109 @@
+{
+  "settings" :
+  {
+      "frequency": 38000,
+      "duty_cycle": 0.330000,
+      "baudrate": 2400
+  },
+  "signals": [
+    {
+        "name": "OFF",
+        "msg": ["55 FF 00 60 9F 60 9F"],
+        "comment": "PBTurnOff()"
+    },
+    {
+        "name": "ABC_STOP",
+        "msg": ["55 FF 00 E1 1E 81 7E 62 9D",
+                "55 FF 00 21 DE 41 BE 62 9D",
+                "55 FF 00 E1 1E 82 7D 63 9C",
+                "55 FF 00 21 DE 42 BD 63 9C",
+                "55 FF 00 E1 1E 84 7B 65 9A",
+                "55 FF 00 21 DE 44 BB 65 9A"],
+        "comment": "SetFwdSetRwdRewDir(FWD, OUT_A) OnOffFloat(OFF, OUT_A) SetFwdSetRwdRewDir(FWD, OUT_B) OnOffFloat(OFF, OUT_B) SetFwdSetRwdRewDir(FWD, OUT_C) OnOffFloat(OFF, OUT_C)"
+    },
+    {
+        "name": "A_FWD",
+        "msg": ["55 FF 00 E1 1E 81 7E 62 9D",
+                "55 FF 00 21 DE 81 7E A2 5D"],
+        "comment": "SetFwdSetRwdRewDir(FWD, OUT_A) OnOffFloat(ON, OUT_A)"
+    },
+    {
+        "name": "A_STOP",
+        "msg": ["55 FF 00 E1 1E 81 7E 62 9D",
+                "55 FF 00 21 DE 41 BE 62 9D"],
+        "comment": "SetFwdSetRwdRewDir(FWD, OUT_A) OnOffFloat(OFF, OUT_A)"
+    },
+    {
+        "name": "A_BWD",
+        "msg": ["55 FF 00 E1 1E 01 FE E2 1D",
+                "55 FF 00 21 DE 81 7E A2 5D"],
+        "comment": "SetFwdSetRwdRewDir(BWD, OUT_A) OnOffFloat(ON, OUT_A)"
+    },
+    {
+        "name": "B_FWD",
+        "msg": ["55 FF 00 E1 1E 82 7D 63 9C",
+                "55 FF 00 21 DE 82 7D A3 5C"],
+        "comment": "SetFwdSetRwdRewDir(FWD, OUT_B) OnOffFloat(ON, OUT_B)"
+    },
+    {
+        "name": "B_STOP",
+        "msg": ["55 FF 00 E1 1E 82 7D 63 9C",
+                "55 FF 00 21 DE 42 BD 63 9C"],
+        "comment": "SetFwdSetRwdRewDir(FWD, OUT_B) OnOffFloat(OFF, OUT_B)"
+    },
+    {
+        "name": "B_BWD",
+        "msg": ["55 FF 00 E1 1E 02 FD E3 1C",
+                "55 FF 00 21 DE 82 7D A3 5C"],
+        "comment": "SetFwdSetRwdRewDir(BWD, OUT_B) OnOffFloat(ON, OUT_B)"
+    },
+    {
+        "name": "C_FWD",
+        "msg": ["55 FF 00 E1 1E 84 7B 65 9A",
+                "55 FF 00 21 DE 84 7B A5 5A"],
+        "comment": "SetFwdSetRwdRewDir(FWD, OUT_C) OnOffFloat(ON, OUT_C)"
+    },
+    {
+        "name": "C_STOP",
+        "msg": ["55 FF 00 E1 1E 84 7B 65 9A",
+                "55 FF 00 21 DE 44 BB 65 9A"],
+        "comment": "SetFwdSetRwdRewDir(FWD, OUT_C) OnOffFloat(OFF, OUT_C)"
+    },
+    {
+        "name": "C_BWD",
+        "msg": ["55 FF 00 E1 1E 04 FB E5 1A",
+                "55 FF 00 21 DE 84 7B A5 5A"],
+        "comment": "SetFwdSetRwdRewDir(BWD, OUT_C) OnOffFloat(ON, OUT_C)"
+    },
+    {
+        "name": "P_CLICK",
+        "msg": ["55 FF 00 80 7F 80 7F",
+                "55 FF 00 51 AE 00 FF 51 AE"],
+        "comment": "ClearSound() PlaySystemSound(Click)"
+    },
+    {
+        "name": "P_BEEP",
+        "msg": ["55 FF 00 80 7F 80 7F",
+                "55 FF 00 51 AE 01 FE 52 AD"],
+        "comment": "ClearSound() PlaySystemSound(Beep)"
+    },
+    {
+        "name": "P_SW_UP",
+        "msg": ["55 FF 00 80 7F 80 7F",
+                "55 FF 00 51 AE 03 FC 54 AB"],
+        "comment": "ClearSound() PlaySystemSound(SweepUp)"
+    },
+    {
+        "name": "P_SW_DN",
+        "msg": ["55 FF 00 80 7F 80 7F",
+                "55 FF 00 51 AE 02 FD 53 AC"],
+        "comment": "ClearSound() PlaySystemSound(SweepDown)"
+    },
+    {
+        "name": "P_ERROR",
+        "msg": ["55 FF 00 80 7F 80 7F",
+                "55 FF 00 51 AE 04 FB 55 AA"],
+        "comment": "ClearSound() PlaySystemSound(Error)"
+    }
+  ]
+}
